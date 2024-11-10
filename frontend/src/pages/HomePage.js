@@ -42,7 +42,7 @@ const HomePage = () => {
   };
 
   const uploadBoxStyle = {
-    border: '2px dotted #1976d2',
+    border: '2px solid #708090',
     padding: 3,
     borderRadius: 2,
     marginBottom: 2,
