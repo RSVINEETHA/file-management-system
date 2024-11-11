@@ -5,7 +5,6 @@ import axios from 'axios';
 import CustomAlert from './CustomAlert'; 
 
 const FileUpload = ({ onUploadSuccess }) => {
-  const [selectedFile, setSelectedFile] = useState(null);
   const [alert, setAlert] = useState({ message: '', type: '', visible: false });
 
   const handleFileChange = (event) => {
@@ -21,7 +20,6 @@ const FileUpload = ({ onUploadSuccess }) => {
       setTimeout(() => {
         setAlert((prev) => ({ ...prev, visible: false }));
       }, 2000);
-      setSelectedFile(null);
       return;
     }
 
@@ -36,11 +34,8 @@ const FileUpload = ({ onUploadSuccess }) => {
     setTimeout(() => {
       setAlert((prev) => ({ ...prev, visible: false }));
     }, 2000);
-    setSelectedFile(null);
     return;
   }
-
-    setSelectedFile(file);
     handleFileUpload(file);
   };
 
